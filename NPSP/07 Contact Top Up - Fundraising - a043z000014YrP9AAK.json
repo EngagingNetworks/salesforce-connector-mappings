@@ -1,0 +1,93 @@
+{
+  "attributes": {
+    "Name": "Contact Top Up - Fundraising", 
+    "engaging__Description__c": "Find Staging objects with empty SFDC Contact Ids", 
+    "engaging__Active__c": true, 
+    "engaging__Batch_Size__c": 100.0, 
+    "engaging__Filter_Logic__c": "1 AND 2 AND (3 OR 4)", 
+    "engaging__Mark_As_Processed__c": false, 
+    "engaging__Object__c": "Contact", 
+    "engaging__Running_Order__c": 5.0, 
+    "engaging__SF_Field_Id__c": "Id", 
+    "engaging__Staging_Field_To_Update__c": "engaging__SFDC_Contact_Id__c", 
+    "engaging__Update_Reference_Id__c": null
+  }, 
+  "mappingDecodeValueItem": [], 
+  "mappingItem": [
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "Email", 
+      "engaging__Staging_Field_Name__c": "engaging__Supporter_Email__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "LastName", 
+      "engaging__Staging_Field_Name__c": "engaging__Supporter_Last_Name__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "FirstName", 
+      "engaging__Staging_Field_Name__c": "engaging__Supporter_First_Name__c"
+    }
+  ], 
+  "mappingQueryFilterItem": [
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 1.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Contact_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "!=", 
+      "engaging__Filter_Index__c": 2.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Supporter_Last_Name__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "Starts With", 
+      "engaging__Filter_Index__c": 3.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "F"
+    },
+    {
+      "engaging__Comparison_Operator__c": "Starts With", 
+      "engaging__Filter_Index__c": 4.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "EC"
+    }
+  ], 
+  "matchingRule": {
+    "attributes": {
+      "engaging__Description__c": "Find Contact through First Name, Last Name and Email address", 
+      "engaging__ENSR_Field_To_Update__c": "engaging__SFDC_Contact_Id__c", 
+      "engaging__Multiple_Results_Action__c": "SelectFirst", 
+      "engaging__No_Results_Action__c": "ContinueWithoutError", 
+      "engaging__Object__c": "Contact", 
+      "engaging__Sort_By__c": "Email", 
+      "engaging__Sort_Order__c": "Ascending"
+    }, 
+    "matchingQueryFilterItems": [
+      {
+        "engaging__Comparison_Operator__c": "=", 
+        "engaging__Filter_Index__c": 1.0, 
+        "engaging__Object_Field_Name__c": "Email", 
+        "engaging__Object_Value__c": "engaging__Supporter_Email__c", 
+        "engaging__Value_Type__c": "ENSRField"
+      }, 
+      {
+        "engaging__Comparison_Operator__c": "=", 
+        "engaging__Filter_Index__c": null, 
+        "engaging__Object_Field_Name__c": "LastName", 
+        "engaging__Object_Value__c": "engaging__Supporter_Last_Name__c", 
+        "engaging__Value_Type__c": "ENSRField"
+      }, 
+      {
+        "engaging__Comparison_Operator__c": "=", 
+        "engaging__Filter_Index__c": null, 
+        "engaging__Object_Field_Name__c": "FirstName", 
+        "engaging__Object_Value__c": "engaging__Supporter_First_Name__c", 
+        "engaging__Value_Type__c": "ENSRField"
+      }
+    ]
+  }
+}

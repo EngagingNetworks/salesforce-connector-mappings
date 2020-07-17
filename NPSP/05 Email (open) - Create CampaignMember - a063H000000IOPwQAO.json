@@ -1,0 +1,71 @@
+{
+  "attributes": {
+    "Name": "Email (open) - Create CampaignMember", 
+    "engaging__Active__c": true, 
+    "engaging__Batch_Size__c": 100.0, 
+    "engaging__Description__c": "Mark Email (Open) as Responded with new CampaignMember", 
+    "engaging__Filter_Logic__c": "1 AND 2 AND 3 AND 4 AND (5 OR 6)", 
+    "engaging__Mark_As_Processed__c": true, 
+    "engaging__Object__c": "CampaignMember", 
+    "engaging__Running_Order__c": 5.0, 
+    "engaging__SF_Field_Id__c": null, 
+    "engaging__Staging_Field_To_Update__c": "engaging__SFDC_CampaignMember_Id__c", 
+    "engaging__Update_Reference_Id__c": null
+  }, 
+  "mappingDecodeValueItem": [], 
+  "mappingItem": [
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "CampaignId", 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Campaign_Id__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "ContactId", 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Contact_Id__c"
+    }, 
+    {
+      "engaging__Default_Value__c": "Responded", 
+      "engaging__Object_Field_Name__c": "Status", 
+      "engaging__Staging_Field_Name__c": "override_with"
+    }
+  ], 
+  "mappingQueryFilterItem": [
+    {
+      "engaging__Comparison_Operator__c": "!=", 
+      "engaging__Filter_Index__c": 1.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Contact_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 3.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_CampaignMember_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 5.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "EBC"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 6.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "MBC"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "!=", 
+      "engaging__Filter_Index__c": 2.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Campaign_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 4.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_01__c", 
+      "engaging__Staging_Value__c": "open"
+    }
+  ]
+}

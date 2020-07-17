@@ -1,0 +1,129 @@
+{
+  "attributes": {
+    "engaging__Active__c": true, 
+    "engaging__Batch_Size__c": null, 
+    "engaging__Description__c": "Update Recurring Donation on change - FCR/FBR", 
+    "engaging__Filter_Logic__c": "(1 or 2) and (3 or 4) and 5 and 6", 
+    "engaging__Mark_As_Processed__c": true, 
+    "Name": "Fundraising Recurring - Lookup & Update RD - change (template)", 
+    "engaging__Object__c": "npe03__Recurring_Donation__c", 
+    "engaging__Running_Order__c": 62.0, 
+    "engaging__SF_Field_Id__c": "Id", 
+    "engaging__Staging_Field_To_Update__c": null, 
+    "engaging__Update_Reference_Id__c": "engaging__SFDC_Recurring_Donation_Id__c"
+  }, 
+  "mappingDecodeValueItem": [
+    {
+      "engaging__Object_Field_Name__c": "npe03__Open_Ended_Status__c", 
+      "engaging__Value_To_Replace__c": "Open", 
+      "engaging__Value__c": "FINAL_RETRY"
+    }, 
+    {
+      "engaging__Object_Field_Name__c": "npe03__Open_Ended_Status__c", 
+      "engaging__Value_To_Replace__c": "Closed", 
+      "engaging__Value__c": "PAUSED"
+    }, 
+    {
+      "engaging__Object_Field_Name__c": "npe03__Open_Ended_Status__c", 
+      "engaging__Value_To_Replace__c": "Open", 
+      "engaging__Value__c": "ACTIVE"
+    }, 
+    {
+      "engaging__Object_Field_Name__c": "npe03__Open_Ended_Status__c", 
+      "engaging__Value_To_Replace__c": "Open", 
+      "engaging__Value__c": "FIRST_RETRY"
+    }, 
+    {
+      "engaging__Object_Field_Name__c": "npe03__Open_Ended_Status__c", 
+      "engaging__Value_To_Replace__c": "Closed", 
+      "engaging__Value__c": "CANCELED"
+    }, 
+    {
+      "engaging__Object_Field_Name__c": "npe03__Open_Ended_Status__c", 
+      "engaging__Value_To_Replace__c": "Closed", 
+      "engaging__Value__c": "SUSPENDED"
+    }
+  ], 
+  "mappingItem": [
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npsp__Day_of_Month__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_08__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npe03__Amount__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_04__c"
+    }, 
+    {
+      "engaging__Default_Value__c": "Open", 
+      "engaging__Object_Field_Name__c": "npe03__Open_Ended_Status__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_10__c"
+    }
+  ], 
+  "mappingQueryFilterItem": [
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 1.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "FCR"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 2.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "FBR"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "Starts With", 
+      "engaging__Filter_Index__c": 3.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c", 
+      "engaging__Staging_Value__c": "change"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "!=", 
+      "engaging__Filter_Index__c": 5.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_11__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 6.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Recurring_Donation_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 4.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c", 
+      "engaging__Staging_Value__c": "reject"
+    }
+  ], 
+  "matchingRule": {
+    "attributes": {
+      "engaging__Description__c": null, 
+      "engaging__ENSR_Field_To_Update__c": "engaging__SFDC_Recurring_Donation_Id__c", 
+      "engaging__Multiple_Results_Action__c": "LogError", 
+      "engaging__No_Results_Action__c": "LogError", 
+      "engaging__Object__c": "npe03__Recurring_Donation__c", 
+      "engaging__Sort_By__c": null, 
+      "engaging__Sort_Order__c": "Not Sorted"
+    }, 
+    "matchingQueryFilterItems": [
+      {
+        "engaging__Comparison_Operator__c": "=", 
+        "engaging__Filter_Index__c": 1.0, 
+        "engaging__Object_Field_Name__c": "engaging_npsp__EN_Parent_Transaction_Id__c", 
+        "engaging__Object_Value__c": "engaging__Transaction_Data_11__c", 
+        "engaging__Value_Type__c": "ENSRField"
+      }, 
+      {
+        "engaging__Comparison_Operator__c": "=", 
+        "engaging__Filter_Index__c": null, 
+        "engaging__Object_Field_Name__c": "npe03__Open_Ended_Status__c", 
+        "engaging__Object_Value__c": "Open", 
+        "engaging__Value_Type__c": "Value"
+      }
+    ]
+  }
+}

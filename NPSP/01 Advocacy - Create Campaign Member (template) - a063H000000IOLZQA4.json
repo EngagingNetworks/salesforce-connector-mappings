@@ -1,0 +1,83 @@
+{
+  "attributes": {
+    "Name": "Advocacy - Create Campaign Member (template)", 
+    "engaging__Description__c": "Create new Campaign Member after participating in an advocacy page", 
+    "engaging__Active__c": true, 
+    "engaging__Batch_Size__c": null, 
+    "engaging__Filter_Logic__c": "1 and 2 and 3 and (4 or 5 or 6 or 7) and 8", 
+    "engaging__Mark_As_Processed__c": true, 
+    "engaging__Object__c": "CampaignMember", 
+    "engaging__Running_Order__c": 1.0, 
+    "engaging__SF_Field_Id__c": "Id", 
+    "engaging__Staging_Field_To_Update__c": "engaging__SFDC_CampaignMember_Id__c", 
+    "engaging__Update_Reference_Id__c": null
+  }, 
+  "mappingDecodeValueItem": [], 
+  "mappingItem": [
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "ContactId", 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Contact_Id__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "CampaignId", 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Campaign_Id__c"
+    }, 
+    {
+      "engaging__Default_Value__c": "Responded", 
+      "engaging__Object_Field_Name__c": "Status", 
+      "engaging__Staging_Field_Name__c": "override_with"
+    }
+  ], 
+  "mappingQueryFilterItem": [
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 6.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "ETT"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 4.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "PET"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 7.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "TWT"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 1.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c", 
+      "engaging__Staging_Value__c": "P"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 8.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_CampaignMember_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "!=", 
+      "engaging__Filter_Index__c": 2.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Campaign_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "!=", 
+      "engaging__Filter_Index__c": 3.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Contact_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 5.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "CTT"
+    }
+  ]
+}

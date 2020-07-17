@@ -1,0 +1,108 @@
+{
+  "attributes": {
+    "engaging__Active__c": true, 
+    "engaging__Batch_Size__c": null, 
+    "engaging__Description__c": "Update Opportunity from Pledged to Posted for a recurring transaction - FCR/FBR", 
+    "engaging__Filter_Logic__c": "(1 or 2) and 3 and 4", 
+    "engaging__Mark_As_Processed__c": false, 
+    "Name": "Fundraising Recurring - Opportunity (template)", 
+    "engaging__Object__c": "Opportunity", 
+    "engaging__Running_Order__c": 63.0, 
+    "engaging__SF_Field_Id__c": "Id", 
+    "engaging__Staging_Field_To_Update__c": null, 
+    "engaging__Update_Reference_Id__c": "engaging__SFDC_Opportunity_Id__c"
+  }, 
+  "mappingDecodeValueItem": [], 
+  "mappingItem": [
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "engaging__EN_Tracking_Value__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Tracking_Value__c"
+    },
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "engaging__EN_Appeal_Code__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Appeal_Code__c"
+    }, 
+    {
+      "engaging__Default_Value__c": "Posted", 
+      "engaging__Object_Field_Name__c": "StageName", 
+      "engaging__Staging_Field_Name__c": "override_with"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "engaging__EN_Transaction_Id__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_02__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "Amount", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_04__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "CloseDate", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Date__c"
+    }
+  ], 
+  "mappingQueryFilterItem": [
+    {
+      "engaging__Comparison_Operator__c": "!=", 
+      "engaging__Filter_Index__c": 4.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Recurring_Donation_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 1.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "FCR"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 2.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "FBR"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 3.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c", 
+      "engaging__Staging_Value__c": "success"
+    }
+  ], 
+  "matchingRule": {
+    "attributes": {
+      "engaging__Description__c": "Look up matching pledged Opportunity on the associated RD. Date may not be an exact match, e.g. if card was declined at first but succeeded on a subsequent attempt.", 
+      "engaging__ENSR_Field_To_Update__c": "engaging__SFDC_Opportunity_Id__c", 
+      "engaging__Multiple_Results_Action__c": "SelectFirst", 
+      "engaging__No_Results_Action__c": "LogError", 
+      "engaging__Object__c": "Opportunity", 
+      "engaging__Sort_By__c": "CloseDate", 
+      "engaging__Sort_Order__c": "Ascending"
+    }, 
+    "matchingQueryFilterItems": [
+      {
+        "engaging__Comparison_Operator__c": "=", 
+        "engaging__Filter_Index__c": 2.0, 
+        "engaging__Object_Field_Name__c": "StageName", 
+        "engaging__Object_Value__c": "Pledged", 
+        "engaging__Value_Type__c": "Value"
+      }, 
+      {
+        "engaging__Comparison_Operator__c": "=", 
+        "engaging__Filter_Index__c": 1.0, 
+        "engaging__Object_Field_Name__c": "npe03__Recurring_Donation__c", 
+        "engaging__Object_Value__c": "engaging__SFDC_Recurring_Donation_Id__c", 
+        "engaging__Value_Type__c": "ENSRField"
+      }, 
+      {
+        "engaging__Comparison_Operator__c": "<=", 
+        "engaging__Filter_Index__c": 3.0, 
+        "engaging__Object_Field_Name__c": "CloseDate", 
+        "engaging__Object_Value__c": "engaging__Transaction_Date__c", 
+        "engaging__Value_Type__c": "ENSRField"
+      }
+    ]
+  }
+}

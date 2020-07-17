@@ -1,0 +1,106 @@
+{
+  "attributes": {
+    "engaging__Active__c": true, 
+    "engaging__Batch_Size__c": null, 
+    "engaging__Description__c": "Create Opportunity for a single fundraising transaction - FCS/FBS", 
+    "engaging__Filter_Logic__c": "1 and 2 and 3 and (4 or 5 or 6)", 
+    "engaging__Mark_As_Processed__c": false, 
+    "Name": "Fundraising Single - Opportunity (template)", 
+    "engaging__Object__c": "Opportunity", 
+    "engaging__Running_Order__c": 51.0, 
+    "engaging__SF_Field_Id__c": "Id", 
+    "engaging__Staging_Field_To_Update__c": "engaging__SFDC_Opportunity_Id__c", 
+    "engaging__Update_Reference_Id__c": null
+  }, 
+  "mappingDecodeValueItem": [], 
+  "mappingItem": [
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "Amount", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_04__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "CloseDate", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Date__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "engaging__EN_Tracking_Value__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Tracking_Value__c"
+    },
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "engaging__EN_Appeal_Code__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Appeal_Code__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npsp__Primary_Contact__c", 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Contact_Id__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "engaging__EN_Transaction_Id__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_02__c"
+    }, 
+    {
+      "engaging__Default_Value__c": "[set by NPSP]", 
+      "engaging__Object_Field_Name__c": "Name", 
+      "engaging__Staging_Field_Name__c": "override_with"
+    }, 
+    {
+      "engaging__Default_Value__c": "Posted", 
+      "engaging__Object_Field_Name__c": "StageName", 
+      "engaging__Staging_Field_Name__c": "override_with"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "CampaignId", 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Campaign_Id__c"
+    }, 
+    {
+      "engaging__Default_Value__c": "true", 
+      "engaging__Object_Field_Name__c": "npe01__Do_Not_Automatically_Create_Payment__c", 
+      "engaging__Staging_Field_Name__c": "override_with"
+    }
+  ], 
+  "mappingQueryFilterItem": [
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 2.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Opportunity_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 4.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "FCS"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 5.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "FBS"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 6.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "FOC"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 3.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c", 
+      "engaging__Staging_Value__c": "success"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "!=", 
+      "engaging__Filter_Index__c": 1.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Contact_Id__c", 
+      "engaging__Staging_Value__c": null
+    }
+  ]
+}

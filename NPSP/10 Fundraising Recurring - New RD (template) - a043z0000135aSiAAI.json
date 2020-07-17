@@ -1,0 +1,142 @@
+{
+  "attributes": {
+    "engaging__Active__c": true, 
+    "engaging__Batch_Size__c": null, 
+    "engaging__Description__c": "Create Recurring Donation for a new commitment - FCR/FBR", 
+    "engaging__Filter_Logic__c": "1 and (2 or 3) and 4 and 5 and 6", 
+    "engaging__Mark_As_Processed__c": false, 
+    "Name": "Fundraising Recurring - New RD (template)", 
+    "engaging__Object__c": "npe03__Recurring_Donation__c", 
+    "engaging__Running_Order__c": 61.0, 
+    "engaging__SF_Field_Id__c": "Id", 
+    "engaging__Staging_Field_To_Update__c": "engaging__SFDC_Recurring_Donation_Id__c", 
+    "engaging__Update_Reference_Id__c": null
+  }, 
+  "mappingDecodeValueItem": [
+    {
+      "engaging__Object_Field_Name__c": "npe03__Installment_Period__c", 
+      "engaging__Value_To_Replace__c": "Monthly",
+      "engaging__Value__c": "MONTHLY"
+    }, 
+    {
+      "engaging__Object_Field_Name__c": "npe03__Installment_Period__c", 
+      "engaging__Value_To_Replace__c": "Quarterly", 
+      "engaging__Value__c": "QUARTERLY"
+    }, 
+    {
+      "engaging__Object_Field_Name__c": "npsp__PaymentMethod__c", 
+      "engaging__Value_To_Replace__c": "Credit Card", 
+      "engaging__Value__c": "FCR"
+    }, 
+    {
+      "engaging__Object_Field_Name__c": "npsp__PaymentMethod__c", 
+      "engaging__Value_To_Replace__c": "ACH/EFT", 
+      "engaging__Value__c": "FBR"
+    }, 
+    {
+      "engaging__Object_Field_Name__c": "npe03__Installment_Period__c", 
+      "engaging__Value_To_Replace__c": "Yearly", 
+      "engaging__Value__c": "ANNUAL"
+    }
+  ], 
+  "mappingItem": [
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npe03__Amount__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_04__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npe03__Contact__c", 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Contact_Id__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npe03__Date_Established__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Date__c"
+    }, 
+    {
+      "engaging__Default_Value__c": "Credit Card", 
+      "engaging__Object_Field_Name__c": "npsp__PaymentMethod__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c"
+    }, 
+    {
+      "engaging__Default_Value__c": "Open", 
+      "engaging__Object_Field_Name__c": "npe03__Open_Ended_Status__c", 
+      "engaging__Staging_Field_Name__c": "override_with"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "engaging_npsp__EN_Parent_Transaction_Id__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_02__c"
+    },
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "engaging_npsp__EN_Parent_Tracking_Value__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Tracking_Value__c"
+    },
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npe03__Installment_Period__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_09__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npe03__Recurring_Donation_Campaign__c", 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Campaign_Id__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npsp__StartDate__c", 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Date__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "Name", 
+      "engaging__Staging_Field_Name__c": "engaging__EN_Campaign_Name__c"
+    }, 
+    {
+      "engaging__Default_Value__c": null, 
+      "engaging__Object_Field_Name__c": "npe03__Installments__c", 
+      "engaging__Staging_Field_Name__c": "override_with"
+    }
+  ], 
+  "mappingQueryFilterItem": [
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 6.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Recurring_Donation_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "!=", 
+      "engaging__Filter_Index__c": 1.0, 
+      "engaging__Staging_Field_Name__c": "engaging__SFDC_Contact_Id__c", 
+      "engaging__Staging_Value__c": null
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 2.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "FCR"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 3.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c", 
+      "engaging__Staging_Value__c": "FBR"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 4.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c", 
+      "engaging__Staging_Value__c": "success"
+    }, 
+    {
+      "engaging__Comparison_Operator__c": "=", 
+      "engaging__Filter_Index__c": 5.0, 
+      "engaging__Staging_Field_Name__c": "engaging__Transaction_Data_11__c", 
+      "engaging__Staging_Value__c": null
+    }
+  ]
+}
