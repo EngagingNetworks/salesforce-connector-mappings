@@ -1,7 +1,7 @@
 {
   "attributes": {
     "engaging__Active__c": true, 
-    "engaging__Batch_Size__c": null, 
+    "engaging__Batch_Size__c": 50, 
     "engaging__Description__c": "Create Recurring Donation for a new commitment - FCR/FBR", 
     "engaging__Filter_Logic__c": "1 and (2 or 3) and 4 and 5 and 6", 
     "engaging__Mark_As_Processed__c": false, 
