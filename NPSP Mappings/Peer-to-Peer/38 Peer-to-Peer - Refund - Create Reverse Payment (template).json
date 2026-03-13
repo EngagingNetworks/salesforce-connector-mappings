@@ -1,0 +1,67 @@
+{
+	"attributes": {
+		"Name": "Peer-to-Peer - Refund - Create Reverse Payment (template)",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Peer-to-Peer - Refund - Create Reverse Payment (template)",
+		"engaging__Filter_Logic__c": "1 and 2 and 3",
+		"engaging__Mark_As_Processed__c": true,
+		"engaging__Object__c": "npe01__OppPayment__c",
+		"engaging__Running_Order__c": 38,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "engaging__SFDC_Payment_Id__c",
+		"engaging__Update_Reference_Id__c": null,
+		"engaging__Group_By_Field_Names__c": null,
+		"engaging__Group_Order_Field_Name__c": null,
+		"engaging__Transaction_To_Use__c": "First"
+	},
+	"mappingItem": [
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "npe01__Payment_Date__c",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Date__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "npe01__Check_Reference_Number__c",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_02__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "npe01__Payment_Amount__c",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_04__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "npe01__Opportunity__c",
+			"engaging__Staging_Field_Name__c": "engaging__SFDC_Opportunity_Id__c"
+		},
+		{
+			"engaging__Default_Value__c": "true",
+			"engaging__Object_Field_Name__c": "npe01__Paid__c",
+			"engaging__Staging_Field_Name__c": "override_with"
+		}
+	],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 3,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "PRFD"
+		},
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__SFDC_Opportunity_Id__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 2,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "success"
+		}
+	],
+	"mappingDecodeValueItem": [],
+	"matchingRules": []
+}
