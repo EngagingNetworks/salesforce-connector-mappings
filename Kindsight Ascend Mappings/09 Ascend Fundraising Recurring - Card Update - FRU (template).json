@@ -1,1 +1,56 @@
-{"attributes":{"Name":"Fundraising Recurring - Card Update - FRU (template)","engaging__Active__c":true,"engaging__Batch_Size__c":null,"engaging__Description__c":"Updates Opportunity with new EN Id so future payments and changes update correct gift","engaging__Filter_Logic__c":null,"engaging__Mark_As_Processed__c":true,"engaging__Object__c":"Opportunity","engaging__Running_Order__c":30.0,"engaging__SF_Field_Id__c":"Id","engaging__Staging_Field_To_Update__c":"engaging__SFDC_Opportunity_Id__c","engaging__Update_Reference_Id__c":"engaging__SFDC_Opportunity_Id__c","engaging__Group_By_Field_Names__c":null,"engaging__Group_Order_Field_Name__c":null,"engaging__Transaction_To_Use__c":"First"},"mappingItem":[{"engaging__Default_Value__c":null,"engaging__Object_Field_Name__c":"ucinn_ascendv2__External_System_ID__c","engaging__Staging_Field_Name__c":"Ascend_External_System_Id__c"}],"mappingQueryFilterItem":[{"engaging__Comparison_Operator__c":"=","engaging__Filter_Index__c":1.0,"engaging__Staging_Field_Name__c":"engaging__Transaction_Type__c","engaging__Staging_Value__c":"FRU"}],"mappingDecodeValueItem":[],"matchingRules":[{"attributes":{"engaging__Description__c":null,"engaging__ENSR_Field_To_Update__c":"engaging__SFDC_Opportunity_Id__c","engaging__Multiple_Results_Action__c":"LogError","engaging__No_Results_Action__c":"LogError","engaging__Object__c":"Opportunity","engaging__Sort_By__c":null,"engaging__Sort_Order__c":null},"matchingQueryFilterItems":[{"engaging__Comparison_Operator__c":"=","engaging__Filter_Index__c":null,"engaging__Object_Field_Name__c":"ucinn_ascendv2__External_System_ID__c","engaging__Object_Value__c":"Ascend_Pledge_Gift_Id__c","engaging__Value_Type__c":"ENSRField"}]}]}
+{
+	"attributes": {
+		"Name": "Fundraising Recurring - Card Update - FRU (template)",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Updates Opportunity with new EN Id so future payments and changes update correct gift",
+		"engaging__Filter_Logic__c": null,
+		"engaging__Mark_As_Processed__c": true,
+		"engaging__Object__c": "Opportunity",
+		"engaging__Running_Order__c": 30,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "engaging__SFDC_Opportunity_Id__c",
+		"engaging__Update_Reference_Id__c": "engaging__SFDC_Opportunity_Id__c",
+		"engaging__Group_By_Field_Names__c": null,
+		"engaging__Group_Order_Field_Name__c": null,
+		"engaging__Transaction_To_Use__c": "First"
+	},
+	"mappingItem": [
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "ucinn_ascendv2__External_System_ID__c",
+			"engaging__Staging_Field_Name__c": "Ascend_External_System_Id__c"
+		}
+	],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FRU"
+		}
+	],
+	"mappingDecodeValueItem": [],
+	"matchingRules": [
+		{
+			"attributes": {
+				"engaging__Description__c": null,
+				"engaging__ENSR_Field_To_Update__c": "engaging__SFDC_Opportunity_Id__c",
+				"engaging__Multiple_Results_Action__c": "LogError",
+				"engaging__No_Results_Action__c": "LogError",
+				"engaging__Object__c": "Opportunity",
+				"engaging__Sort_By__c": null,
+				"engaging__Sort_Order__c": null
+			},
+			"matchingQueryFilterItems": [
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "ucinn_ascendv2__External_System_ID__c",
+					"engaging__Object_Value__c": "Ascend_Pledge_Gift_Id__c",
+					"engaging__Value_Type__c": "ENSRField"
+				}
+			]
+		}
+	]
+}
