@@ -1,1 +1,79 @@
-{"attributes":{"Name":"Fundraising In Memoriam - Update RTv2 with Tribute - FIM (template)","engaging__Active__c":true,"engaging__Batch_Size__c":null,"engaging__Description__c":"Updates related recurring gift with in memoriam information for when transaction is processed.","engaging__Filter_Logic__c":null,"engaging__Mark_As_Processed__c":true,"engaging__Object__c":"ucinn_ascendv2__Review_Transaction_v2__c","engaging__Running_Order__c":40.0,"engaging__SF_Field_Id__c":"Id","engaging__Staging_Field_To_Update__c":"Ascend_Transaction_Id__c","engaging__Update_Reference_Id__c":"Ascend_Transaction_Id__c","engaging__Group_By_Field_Names__c":null,"engaging__Group_Order_Field_Name__c":null,"engaging__Transaction_To_Use__c":"First"},"mappingItem":[{"engaging__Default_Value__c":null,"engaging__Object_Field_Name__c":"ucinn_ascendv2__Tributee_1__c","engaging__Staging_Field_Name__c":"engaging__Transaction_Data_11__c"},{"engaging__Default_Value__c":"In Honor Of","engaging__Object_Field_Name__c":"ucinn_ascendv2__Tribute_Type_1__c","engaging__Staging_Field_Name__c":"override_with"}],"mappingQueryFilterItem":[{"engaging__Comparison_Operator__c":"=","engaging__Filter_Index__c":1.0,"engaging__Staging_Field_Name__c":"engaging__Transaction_Type__c","engaging__Staging_Value__c":"FIM"},{"engaging__Comparison_Operator__c":"=","engaging__Filter_Index__c":2.0,"engaging__Staging_Field_Name__c":"Ascend_Transaction_Id__c","engaging__Staging_Value__c":null},{"engaging__Comparison_Operator__c":"=","engaging__Filter_Index__c":3.0,"engaging__Staging_Field_Name__c":"engaging__Transaction_Status__c","engaging__Staging_Value__c":"success"},{"engaging__Comparison_Operator__c":"=","engaging__Filter_Index__c":4.0,"engaging__Staging_Field_Name__c":"engaging__Transaction_Data_06__c","engaging__Staging_Value__c":"Y"}],"mappingDecodeValueItem":[],"matchingRules":[{"attributes":{"engaging__Description__c":null,"engaging__ENSR_Field_To_Update__c":"Ascend_Transaction_Id__c","engaging__Multiple_Results_Action__c":"LogError","engaging__No_Results_Action__c":"LogError","engaging__Object__c":"ucinn_ascendv2__Review_Transaction_v2__c","engaging__Sort_By__c":null,"engaging__Sort_Order__c":null},"matchingQueryFilterItems":[{"engaging__Comparison_Operator__c":"=","engaging__Filter_Index__c":null,"engaging__Object_Field_Name__c":"ucinn_ascendv2__External_System_ID__c","engaging__Object_Value__c":"Ascend_External_System_Id__c","engaging__Value_Type__c":"ENSRField"}]}]}
+{
+	"attributes": {
+		"Name": "Fundraising In Memoriam - Update RTv2 with Tribute - FIM (template)",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Updates related recurring gift with in memoriam information for when transaction is processed.",
+		"engaging__Filter_Logic__c": null,
+		"engaging__Mark_As_Processed__c": true,
+		"engaging__Object__c": "ucinn_ascendv2__Review_Transaction_v2__c",
+		"engaging__Running_Order__c": 40,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "Ascend_Transaction_Id__c",
+		"engaging__Update_Reference_Id__c": "Ascend_Transaction_Id__c",
+		"engaging__Group_By_Field_Names__c": null,
+		"engaging__Group_Order_Field_Name__c": null,
+		"engaging__Transaction_To_Use__c": "First"
+	},
+	"mappingItem": [
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "ucinn_ascendv2__Tributee_1__c",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_11__c"
+		},
+		{
+			"engaging__Default_Value__c": "In Honor Of",
+			"engaging__Object_Field_Name__c": "ucinn_ascendv2__Tribute_Type_1__c",
+			"engaging__Staging_Field_Name__c": "override_with"
+		}
+	],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FIM"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 2,
+			"engaging__Staging_Field_Name__c": "Ascend_Transaction_Id__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 3,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "success"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 4,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_06__c",
+			"engaging__Staging_Value__c": "Y"
+		}
+	],
+	"mappingDecodeValueItem": [],
+	"matchingRules": [
+		{
+			"attributes": {
+				"engaging__Description__c": null,
+				"engaging__ENSR_Field_To_Update__c": "Ascend_Transaction_Id__c",
+				"engaging__Multiple_Results_Action__c": "LogError",
+				"engaging__No_Results_Action__c": "LogError",
+				"engaging__Object__c": "ucinn_ascendv2__Review_Transaction_v2__c",
+				"engaging__Sort_By__c": null,
+				"engaging__Sort_Order__c": null
+			},
+			"matchingQueryFilterItems": [
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "ucinn_ascendv2__External_System_ID__c",
+					"engaging__Object_Value__c": "Ascend_External_System_Id__c",
+					"engaging__Value_Type__c": "ENSRField"
+				}
+			]
+		}
+	]
+}
