@@ -1,0 +1,199 @@
+{
+	"attributes": {
+		"Name": "Fundraising Recurring - Create Initial Recurring Gift Transaction (FCR/FBR) TEMP",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Create Gift Transaction for new recurring donation.",
+		"engaging__Filter_Logic__c": "(1 OR 2) AND 3 AND 4 AND 5 AND 6 AND 7 AND 8",
+		"engaging__Mark_As_Processed__c": false,
+		"engaging__Object__c": "GiftTransaction",
+		"engaging__Running_Order__c": 28,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "SFDC_Gift_Transaction_Id__c",
+		"engaging__Update_Reference_Id__c": null,
+		"engaging__Group_By_Field_Names__c": null,
+		"engaging__Group_Order_Field_Name__c": null,
+		"engaging__Transaction_To_Use__c": "First"
+	},
+	"mappingItem": [
+		{
+			"engaging__Default_Value__c": "[Set Up Automatic Naming in NPC]",
+			"engaging__Object_Field_Name__c": "Name",
+			"engaging__Staging_Field_Name__c": "override_with"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "OriginalAmount",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_04__c"
+		},
+		{
+			"engaging__Default_Value__c": "Paid",
+			"engaging__Object_Field_Name__c": "Status",
+			"engaging__Staging_Field_Name__c": "override_with"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "GiftCommitmentId",
+			"engaging__Staging_Field_Name__c": "SFDC_Gift_Commitment_Id__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "OutreachSourceCodeId",
+			"engaging__Staging_Field_Name__c": "SFDC_Outreach_Source_Code_Id__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "EN_Tracking_Value__c",
+			"engaging__Staging_Field_Name__c": "engaging__Tracking_Value__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "GiftCommitmentScheduleId",
+			"engaging__Staging_Field_Name__c": "SFDC_Commitment_Schedule_Id__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "PaymentIdentifier",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_02__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "DonorId",
+			"engaging__Staging_Field_Name__c": "SFDC_Person_Account_Id__c"
+		},
+		{
+			"engaging__Default_Value__c": "Individual",
+			"engaging__Object_Field_Name__c": "GiftType",
+			"engaging__Staging_Field_Name__c": "override_with"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "CampaignId",
+			"engaging__Staging_Field_Name__c": "engaging__SFDC_Campaign_Id__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "TransactionDate",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Date__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "PaymentMethod",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "EN_Transaction_Id__c",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_02__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "TransactionDueDate",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Date__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "OutreachSourceCodeId",
+			"engaging__Staging_Field_Name__c": "SFDC_Outreach_Source_Code_Id__c"
+		}
+	],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 8,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_11__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 5,
+			"engaging__Staging_Field_Name__c": "SFDC_Person_Account_Id__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 6,
+			"engaging__Staging_Field_Name__c": "SFDC_Gift_Commitment_Id__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FCR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 2,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FBR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 3,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "success"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 4,
+			"engaging__Staging_Field_Name__c": "SFDC_Gift_Transaction_Id__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 7,
+			"engaging__Staging_Field_Name__c": "SFDC_Commitment_Schedule_Id__c",
+			"engaging__Staging_Value__c": null
+		}
+	],
+	"mappingDecodeValueItem": [
+		{
+			"engaging__Object_Field_Name__c": "PaymentMethod",
+			"engaging__Value_To_Replace__c": "Credit Card",
+			"engaging__Value__c": "FCR"
+		},
+		{
+			"engaging__Object_Field_Name__c": "PaymentMethod",
+			"engaging__Value_To_Replace__c": "ACH",
+			"engaging__Value__c": "FBR"
+		}
+	],
+	"matchingRules": [
+		{
+			"attributes": {
+				"engaging__Description__c": "Looks up existing transaction or creates one if none available",
+				"engaging__ENSR_Field_To_Update__c": "SFDC_Gift_Transaction_Id__c",
+				"engaging__Multiple_Results_Action__c": "SelectFirst",
+				"engaging__No_Results_Action__c": "ContinueWithoutError",
+				"engaging__Object__c": "GiftTransaction",
+				"engaging__Matching_Type__c": "MatchingQueryItems",
+				"engaging__Sort_By__c": "TransactionDueDate",
+				"engaging__Sort_Order__c": "Descending"
+			},
+			"matchingQueryFilterItems": [
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "GiftCommitmentId",
+					"engaging__Object_Value__c": "SFDC_Gift_Commitment_Id__c",
+					"engaging__Value_Type__c": "ENSRField"
+				},
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "GiftCommitmentScheduleId",
+					"engaging__Object_Value__c": "SFDC_Commitment_Schedule_Id__c",
+					"engaging__Value_Type__c": "ENSRField"
+				},
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "IsPaid",
+					"engaging__Object_Value__c": "FALSE",
+					"engaging__Value_Type__c": "Value"
+				}
+			]
+		}
+	]
+}
