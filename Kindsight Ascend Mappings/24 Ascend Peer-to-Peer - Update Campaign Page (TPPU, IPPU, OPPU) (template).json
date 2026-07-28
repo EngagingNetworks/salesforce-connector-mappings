@@ -7,7 +7,7 @@
 		"engaging__Filter_Logic__c": "1 or 2 or 3",
 		"engaging__Mark_As_Processed__c": true,
 		"engaging__Object__c": "Campaign",
-		"engaging__Running_Order__c": 51,
+		"engaging__Running_Order__c": 24,
 		"engaging__SF_Field_Id__c": "Id",
 		"engaging__Staging_Field_To_Update__c": "engaging__SFDC_Campaign_Id__c",
 		"engaging__Update_Reference_Id__c": "engaging__SFDC_Campaign_Id__c",
