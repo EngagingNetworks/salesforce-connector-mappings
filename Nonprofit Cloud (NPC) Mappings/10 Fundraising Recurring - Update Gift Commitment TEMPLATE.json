@@ -7,7 +7,7 @@
 		"engaging__Filter_Logic__c": "1 AND 2 AND 3",
 		"engaging__Mark_As_Processed__c": false,
 		"engaging__Object__c": "GiftCommitment",
-		"engaging__Running_Order__c": 27,
+		"engaging__Running_Order__c": 10,
 		"engaging__SF_Field_Id__c": "Id",
 		"engaging__Staging_Field_To_Update__c": null,
 		"engaging__Update_Reference_Id__c": "SFDC_Gift_Commitment_Id__c",
