@@ -1,0 +1,87 @@
+{
+	"attributes": {
+		"Name": "Fundraising Recurring - Migrated Gift Commitment (FCR/FBR) TEMPLATE",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Finds existing gift commitment and updates with EN Parent Transaction Id. Assumes data load put the existing Gift Commitment Id into the External Transaction 8 field for import.",
+		"engaging__Filter_Logic__c": "(1 OR 2) AND 3 AND 4 AND 5 AND 6 AND (7 OR 8) and 9",
+		"engaging__Mark_As_Processed__c": false,
+		"engaging__Object__c": "GiftCommitment",
+		"engaging__Running_Order__c": 22,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "SFDC_Gift_Commitment_Id__c",
+		"engaging__Update_Reference_Id__c": "engaging__External_Reference_08__c",
+		"engaging__Group_By_Field_Names__c": null,
+		"engaging__Group_Order_Field_Name__c": null,
+		"engaging__Transaction_To_Use__c": "First"
+	},
+	"mappingItem": [
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "EN_Parent_Transaction_Id__c",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_02__c"
+		},
+		{
+			"engaging__Default_Value__c": "Active",
+			"engaging__Object_Field_Name__c": "Status",
+			"engaging__Staging_Field_Name__c": "override_with"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "EN_Parent_Tracking_Value__c",
+			"engaging__Staging_Field_Name__c": "engaging__Tracking_Value__c"
+		}
+	],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 6,
+			"engaging__Staging_Field_Name__c": "SFDC_Person_Account_Id__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 5,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_11__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FCR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 3,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "success"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 2,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FBR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 4,
+			"engaging__Staging_Field_Name__c": "SFDC_Gift_Commitment_Id__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "Contains",
+			"engaging__Filter_Index__c": 7,
+			"engaging__Staging_Field_Name__c": "engaging__EN_Campaign_Name__c",
+			"engaging__Staging_Value__c": "Migration"
+		},
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 8,
+			"engaging__Staging_Field_Name__c": "engaging__External_Reference_08__c",
+			"engaging__Staging_Value__c": null
+		}
+	],
+	"mappingDecodeValueItem": [],
+	"matchingRules": []
+}
