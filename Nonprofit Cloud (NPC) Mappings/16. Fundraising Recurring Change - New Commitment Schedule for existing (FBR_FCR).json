@@ -1,0 +1,173 @@
+{
+	"attributes": {
+		"Name": "Fundraising Recurring Change - New Commitment Schedule for existing (FBR/FCR)",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Sets up a new gift commitment schedule for an existing recurring gift",
+		"engaging__Filter_Logic__c": "(1 or 2) and 3 and 4 and 5 and 6",
+		"engaging__Mark_As_Processed__c": false,
+		"engaging__Object__c": "GiftCommitmentSchedule",
+		"engaging__Running_Order__c": 38,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "SFDC_Commitment_Schedule_Id__c",
+		"engaging__Update_Reference_Id__c": null,
+		"engaging__Group_By_Field_Names__c": "engaging__Transaction_Data_11__c",
+		"engaging__Group_Order_Field_Name__c": "engaging__Transaction_Date_Time_v2__c",
+		"engaging__Transaction_To_Use__c": "First"
+	},
+	"mappingItem": [
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "GiftCommitmentId",
+			"engaging__Staging_Field_Name__c": "SFDC_Gift_Commitment_Id__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "TransactionPeriod",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_09__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "TransactionInterval",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_09__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "TransactionAmount",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_04__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "CampaignId",
+			"engaging__Staging_Field_Name__c": "engaging__SFDC_Campaign_Id__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "StartDate",
+			"engaging__Staging_Field_Name__c": "Transaction_Date_1__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "OutreachSourceCodeId",
+			"engaging__Staging_Field_Name__c": "SFDC_Outreach_Source_Code_Id__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "TransactionDay",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_08__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "PaymentMethod",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "EN_Parent_Transaction_Id__c",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_11__c"
+		}
+	],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FCR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 2,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FBR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 4,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_04__c",
+			"engaging__Staging_Value__c": ".00"
+		},
+		{
+			"engaging__Comparison_Operator__c": "Starts With",
+			"engaging__Filter_Index__c": 3,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "change"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 5,
+			"engaging__Staging_Field_Name__c": "SFDC_Commitment_Schedule_Id__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 6,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_10__c",
+			"engaging__Staging_Value__c": "ACTIVE"
+		}
+	],
+	"mappingDecodeValueItem": [
+		{
+			"engaging__Object_Field_Name__c": "TransactionPeriod",
+			"engaging__Value_To_Replace__c": "Yearly",
+			"engaging__Value__c": "Annual"
+		},
+		{
+			"engaging__Object_Field_Name__c": "TransactionPeriod",
+			"engaging__Value_To_Replace__c": "Monthly",
+			"engaging__Value__c": "Quarterly"
+		},
+		{
+			"engaging__Object_Field_Name__c": "TransactionInterval",
+			"engaging__Value_To_Replace__c": "1",
+			"engaging__Value__c": "Monthly"
+		},
+		{
+			"engaging__Object_Field_Name__c": "PaymentMethod",
+			"engaging__Value_To_Replace__c": "Credit Card",
+			"engaging__Value__c": "FCR"
+		},
+		{
+			"engaging__Object_Field_Name__c": "PaymentMethod",
+			"engaging__Value_To_Replace__c": "Automatic Bank Withdrawl",
+			"engaging__Value__c": "FBR"
+		},
+		{
+			"engaging__Object_Field_Name__c": "TransactionInterval",
+			"engaging__Value_To_Replace__c": "1",
+			"engaging__Value__c": "Annual"
+		},
+		{
+			"engaging__Object_Field_Name__c": "TransactionPeriod",
+			"engaging__Value_To_Replace__c": "Monthly",
+			"engaging__Value__c": "Monthly"
+		},
+		{
+			"engaging__Object_Field_Name__c": "TransactionInterval",
+			"engaging__Value_To_Replace__c": "3",
+			"engaging__Value__c": "Quarterly"
+		}
+	],
+	"matchingRules": [
+		{
+			"attributes": {
+				"engaging__Description__c": null,
+				"engaging__ENSR_Field_To_Update__c": "SFDC_Gift_Commitment_Id__c",
+				"engaging__Multiple_Results_Action__c": "LogError",
+				"engaging__No_Results_Action__c": "LogError",
+				"engaging__Object__c": "GiftCommitment",
+				"engaging__Matching_Type__c": "MatchingQueryItems",
+				"engaging__Sort_By__c": null,
+				"engaging__Sort_Order__c": null
+			},
+			"matchingQueryFilterItems": [
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "EN_Parent_Transaction_Id__c",
+					"engaging__Object_Value__c": "engaging__Transaction_Data_11__c",
+					"engaging__Value_Type__c": "ENSRField"
+				}
+			]
+		}
+	]
+}
