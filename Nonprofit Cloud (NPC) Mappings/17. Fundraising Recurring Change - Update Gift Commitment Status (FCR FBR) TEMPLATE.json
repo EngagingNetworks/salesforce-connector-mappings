@@ -1,0 +1,100 @@
+{
+	"attributes": {
+		"Name": "Fundraising Recurring Change - Update Gift Commitment Status (FCR FBR) TEMPLATE",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Updates Gift Commitment with status.",
+		"engaging__Filter_Logic__c": "(1 OR 2) AND 3",
+		"engaging__Mark_As_Processed__c": true,
+		"engaging__Object__c": "GiftCommitment",
+		"engaging__Running_Order__c": 39,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "SFDC_Gift_Commitment_Id__c",
+		"engaging__Update_Reference_Id__c": "SFDC_Gift_Commitment_Id__c",
+		"engaging__Group_By_Field_Names__c": "engaging__Transaction_Data_11__c",
+		"engaging__Group_Order_Field_Name__c": "engaging__Transaction_Date__c",
+		"engaging__Transaction_To_Use__c": "Last"
+	},
+	"mappingItem": [
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "Status",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_10__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "CurrentGiftCmtScheduleId",
+			"engaging__Staging_Field_Name__c": "SFDC_Commitment_Schedule_Id__c"
+		}
+	],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "Starts With",
+			"engaging__Filter_Index__c": 3,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "change"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 2,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FBR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FCR"
+		}
+	],
+	"mappingDecodeValueItem": [
+		{
+			"engaging__Object_Field_Name__c": "Status",
+			"engaging__Value_To_Replace__c": "Active",
+			"engaging__Value__c": "ACTIVE"
+		},
+		{
+			"engaging__Object_Field_Name__c": "Status",
+			"engaging__Value_To_Replace__c": "Closed",
+			"engaging__Value__c": "CANCELED"
+		},
+		{
+			"engaging__Object_Field_Name__c": "Status",
+			"engaging__Value_To_Replace__c": "Lapsed",
+			"engaging__Value__c": "SUSPENDED"
+		},
+		{
+			"engaging__Object_Field_Name__c": "Status",
+			"engaging__Value_To_Replace__c": "Failing",
+			"engaging__Value__c": "FIRST_RETRY"
+		},
+		{
+			"engaging__Object_Field_Name__c": "Status",
+			"engaging__Value_To_Replace__c": "Failing",
+			"engaging__Value__c": "FINAL_RETRY"
+		}
+	],
+	"matchingRules": [
+		{
+			"attributes": {
+				"engaging__Description__c": null,
+				"engaging__ENSR_Field_To_Update__c": "SFDC_Gift_Commitment_Id__c",
+				"engaging__Multiple_Results_Action__c": "LogError",
+				"engaging__No_Results_Action__c": "LogError",
+				"engaging__Object__c": "GiftCommitment",
+				"engaging__Matching_Type__c": "MatchingQueryItems",
+				"engaging__Sort_By__c": null,
+				"engaging__Sort_Order__c": null
+			},
+			"matchingQueryFilterItems": [
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "EN_Parent_Transaction_Id__c",
+					"engaging__Object_Value__c": "engaging__Transaction_Data_11__c",
+					"engaging__Value_Type__c": "ENSRField"
+				}
+			]
+		}
+	]
+}
