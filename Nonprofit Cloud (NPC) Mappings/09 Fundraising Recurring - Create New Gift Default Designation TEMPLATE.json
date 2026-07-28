@@ -7,7 +7,7 @@
 		"engaging__Filter_Logic__c": "(1 or 2) and 3 and 4 and 5 and 6",
 		"engaging__Mark_As_Processed__c": false,
 		"engaging__Object__c": "GiftDefaultDesignation",
-		"engaging__Running_Order__c": 26,
+		"engaging__Running_Order__c": 9,
 		"engaging__SF_Field_Id__c": "Id",
 		"engaging__Staging_Field_To_Update__c": "SFDC_Gift_Designation_Id__c",
 		"engaging__Update_Reference_Id__c": null,
