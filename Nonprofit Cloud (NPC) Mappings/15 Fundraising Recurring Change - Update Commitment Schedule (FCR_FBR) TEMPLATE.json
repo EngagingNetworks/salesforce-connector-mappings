@@ -7,7 +7,7 @@
 		"engaging__Filter_Logic__c": "(1 OR 2) AND 3 AND 5 AND 6",
 		"engaging__Mark_As_Processed__c": false,
 		"engaging__Object__c": "GiftCommitmentSchedule",
-		"engaging__Running_Order__c": 37,
+		"engaging__Running_Order__c": 15,
 		"engaging__SF_Field_Id__c": "Id",
 		"engaging__Staging_Field_To_Update__c": "SFDC_Old_Commitment_Schedule_Id__c",
 		"engaging__Update_Reference_Id__c": "SFDC_Old_Commitment_Schedule_Id__c",
