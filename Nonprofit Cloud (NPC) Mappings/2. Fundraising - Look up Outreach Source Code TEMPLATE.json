@@ -1,0 +1,70 @@
+{
+	"attributes": {
+		"Name": "Fundraising Single - Look up Outreach Source Code TEMPLATE",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Looks up Outreach Source Code by comparing Appeal Code against Source Code field. Update mapping value to set a default",
+		"engaging__Filter_Logic__c": "1 AND (2 OR 3)",
+		"engaging__Mark_As_Processed__c": true,
+		"engaging__Object__c": "OutreachSourceCode",
+		"engaging__Running_Order__c": 3,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "SFDC_Outreach_Source_Code_Id__c",
+		"engaging__Update_Reference_Id__c": "SFDC_Outreach_Source_Code_Id__c",
+		"engaging__Group_By_Field_Names__c": null,
+		"engaging__Group_Order_Field_Name__c": null,
+		"engaging__Transaction_To_Use__c": "First"
+	},
+	"mappingItem": [],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "Starts With",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "F"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 2,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "success"
+		},
+		{
+			"engaging__Comparison_Operator__c": "Starts With",
+			"engaging__Filter_Index__c": 3,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "change"
+		}
+	],
+	"mappingDecodeValueItem": [],
+	"matchingRules": [
+		{
+			"attributes": {
+				"engaging__Description__c": null,
+				"engaging__ENSR_Field_To_Update__c": "SFDC_Outreach_Source_Code_Id__c",
+				"engaging__Multiple_Results_Action__c": "SelectFirst",
+				"engaging__No_Results_Action__c": "LogError",
+				"engaging__Object__c": "OutreachSourceCode",
+				"engaging__Matching_Type__c": "MatchingQueryItems",
+				"engaging__Sort_By__c": "CreatedDate",
+				"engaging__Sort_Order__c": "Descending"
+			},
+			"matchingQueryFilterItems": [
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "SourceCode",
+					"engaging__Object_Value__c": "engaging__Appeal_Code__c",
+					"engaging__Value_Type__c": "ENSRField"
+				},
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "CampaignId",
+					"engaging__Object_Value__c": "engaging__SFDC_Campaign_Id__c",
+					"engaging__Value_Type__c": "ENSRField"
+				}
+			]
+		}
+	]
+}
