@@ -7,7 +7,7 @@
 		"engaging__Filter_Logic__c": "(1 OR 2) AND 3 AND 4 AND 5",
 		"engaging__Mark_As_Processed__c": true,
 		"engaging__Object__c": "ucinn_ascendv2__Review_Transaction_v2__c",
-		"engaging__Running_Order__c": 10,
+		"engaging__Running_Order__c": 3,
 		"engaging__SF_Field_Id__c": "Id",
 		"engaging__Staging_Field_To_Update__c": "Ascend_Transaction_Id__c",
 		"engaging__Update_Reference_Id__c": null,
