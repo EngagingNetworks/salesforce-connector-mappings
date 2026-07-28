@@ -1,0 +1,75 @@
+{
+	"attributes": {
+		"Name": "Fundraising Recurring - Create New Gift Default Designation TEMPLATE",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Creates new gift default designation for a gift commitment. Assumes field External Transaction 7 on the EN Page is enabled and is used for the designation id",
+		"engaging__Filter_Logic__c": "(1 or 2) and 3 and 4 and 5 and 6",
+		"engaging__Mark_As_Processed__c": false,
+		"engaging__Object__c": "GiftDefaultDesignation",
+		"engaging__Running_Order__c": 26,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "SFDC_Gift_Designation_Id__c",
+		"engaging__Update_Reference_Id__c": null,
+		"engaging__Group_By_Field_Names__c": null,
+		"engaging__Group_Order_Field_Name__c": null,
+		"engaging__Transaction_To_Use__c": "First"
+	},
+	"mappingItem": [
+		{
+			"engaging__Default_Value__c": "1",
+			"engaging__Object_Field_Name__c": "AllocatedPercentage",
+			"engaging__Staging_Field_Name__c": "Percent__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "GiftDesignationId",
+			"engaging__Staging_Field_Name__c": "engaging__External_Reference_07__c"
+		},
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "ParentRecordId",
+			"engaging__Staging_Field_Name__c": "SFDC_Gift_Commitment_Id__c"
+		}
+	],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FCR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 3,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "success"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 2,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FBR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 4,
+			"engaging__Staging_Field_Name__c": "SFDC_Gift_Commitment_Id__c",
+			"engaging__Staging_Value__c": null
+		},
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 6,
+			"engaging__Staging_Field_Name__c": "engaging__EN_Campaign_Name__c",
+			"engaging__Staging_Value__c": "Migration Page"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 5,
+			"engaging__Staging_Field_Name__c": "SFDC_Gift_Designation_Id__c",
+			"engaging__Staging_Value__c": null
+		}
+	],
+	"mappingDecodeValueItem": [],
+	"matchingRules": []
+}
