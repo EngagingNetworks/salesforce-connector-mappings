@@ -7,7 +7,7 @@
 		"engaging__Filter_Logic__c": "(1 OR 2) AND 3 AND 4 AND 5 AND 6 AND 7 AND 8",
 		"engaging__Mark_As_Processed__c": false,
 		"engaging__Object__c": "GiftTransaction",
-		"engaging__Running_Order__c": 28,
+		"engaging__Running_Order__c": 11,
 		"engaging__SF_Field_Id__c": "Id",
 		"engaging__Staging_Field_To_Update__c": "SFDC_Gift_Transaction_Id__c",
 		"engaging__Update_Reference_Id__c": null,
