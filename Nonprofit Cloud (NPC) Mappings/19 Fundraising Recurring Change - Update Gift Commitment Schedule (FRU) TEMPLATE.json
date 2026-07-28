@@ -7,7 +7,7 @@
 		"engaging__Filter_Logic__c": null,
 		"engaging__Mark_As_Processed__c": true,
 		"engaging__Object__c": "GiftCommitmentSchedule",
-		"engaging__Running_Order__c": 41,
+		"engaging__Running_Order__c": 19,
 		"engaging__SF_Field_Id__c": "Id",
 		"engaging__Staging_Field_To_Update__c": null,
 		"engaging__Update_Reference_Id__c": "SFDC_Gift_Commitment_Schedule_Id__c",
