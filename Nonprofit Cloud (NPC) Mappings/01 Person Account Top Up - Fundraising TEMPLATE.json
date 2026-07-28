@@ -7,7 +7,7 @@
 		"engaging__Filter_Logic__c": null,
 		"engaging__Mark_As_Processed__c": false,
 		"engaging__Object__c": "Account",
-		"engaging__Running_Order__c": 2,
+		"engaging__Running_Order__c": 1,
 		"engaging__SF_Field_Id__c": "Id",
 		"engaging__Staging_Field_To_Update__c": "SFDC_Person_Account_Id__c",
 		"engaging__Update_Reference_Id__c": "SFDC_Person_Account_Id__c",
