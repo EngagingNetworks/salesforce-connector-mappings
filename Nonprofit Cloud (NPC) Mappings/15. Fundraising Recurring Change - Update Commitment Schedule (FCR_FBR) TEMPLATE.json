@@ -1,0 +1,88 @@
+{
+	"attributes": {
+		"Name": "Fundraising Recurring Change - Update Commitment Schedule (FCR/FBR) TEMPLATE",
+		"engaging__Active__c": true,
+		"engaging__Batch_Size__c": null,
+		"engaging__Description__c": "Sets End Date on current Gift Commitment Schedule. NOTE: Supplemental automation may be required if NPC is configured to automatically create new unpaid transactions - current commitment schedule can not be closed if unpaid transactions exist",
+		"engaging__Filter_Logic__c": "(1 OR 2) AND 3 AND 5 AND 6",
+		"engaging__Mark_As_Processed__c": false,
+		"engaging__Object__c": "GiftCommitmentSchedule",
+		"engaging__Running_Order__c": 37,
+		"engaging__SF_Field_Id__c": "Id",
+		"engaging__Staging_Field_To_Update__c": "SFDC_Old_Commitment_Schedule_Id__c",
+		"engaging__Update_Reference_Id__c": "SFDC_Old_Commitment_Schedule_Id__c",
+		"engaging__Group_By_Field_Names__c": "engaging__Transaction_Data_11__c",
+		"engaging__Group_Order_Field_Name__c": "engaging__Transaction_Date_Time_v2__c",
+		"engaging__Transaction_To_Use__c": "First"
+	},
+	"mappingItem": [
+		{
+			"engaging__Default_Value__c": null,
+			"engaging__Object_Field_Name__c": "EndDate",
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Date__c"
+		}
+	],
+	"mappingQueryFilterItem": [
+		{
+			"engaging__Comparison_Operator__c": "Starts With",
+			"engaging__Filter_Index__c": 3,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Status__c",
+			"engaging__Staging_Value__c": "change"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 2,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FBR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 1,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Type__c",
+			"engaging__Staging_Value__c": "FCR"
+		},
+		{
+			"engaging__Comparison_Operator__c": "!=",
+			"engaging__Filter_Index__c": 5,
+			"engaging__Staging_Field_Name__c": "engaging__Transaction_Data_04__c",
+			"engaging__Staging_Value__c": ".00"
+		},
+		{
+			"engaging__Comparison_Operator__c": "=",
+			"engaging__Filter_Index__c": 6,
+			"engaging__Staging_Field_Name__c": "SFDC_Old_Commitment_Schedule_Id__c",
+			"engaging__Staging_Value__c": null
+		}
+	],
+	"mappingDecodeValueItem": [],
+	"matchingRules": [
+		{
+			"attributes": {
+				"engaging__Description__c": "Looks up record using Transaction Data 11 and EN Parent Transaction Id",
+				"engaging__ENSR_Field_To_Update__c": "SFDC_Old_Commitment_Schedule_Id__c",
+				"engaging__Multiple_Results_Action__c": "LogError",
+				"engaging__No_Results_Action__c": "LogError",
+				"engaging__Object__c": "GiftCommitmentSchedule",
+				"engaging__Matching_Type__c": "MatchingQueryItems",
+				"engaging__Sort_By__c": null,
+				"engaging__Sort_Order__c": null
+			},
+			"matchingQueryFilterItems": [
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "EN_Parent_Transaction_Id__c",
+					"engaging__Object_Value__c": "engaging__Transaction_Data_11__c",
+					"engaging__Value_Type__c": "ENSRField"
+				},
+				{
+					"engaging__Comparison_Operator__c": "=",
+					"engaging__Filter_Index__c": null,
+					"engaging__Object_Field_Name__c": "End_Date_is_Blank__c",
+					"engaging__Object_Value__c": "TRUE",
+					"engaging__Value_Type__c": "Value"
+				}
+			]
+		}
+	]
+}
